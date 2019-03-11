@@ -9,6 +9,10 @@ use Illuminate\Http\Response;
 
 class QuestionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('jwt', ['except' => [ 'index', 'show']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -76,7 +80,8 @@ class QuestionController extends Controller
      */
     public function update(Request $request, Question $question)
     {
-        //
+        $question->update($request->all());
+        return response('Updated', Response::HTTP_ACCEPTED);
     }
 
     /**

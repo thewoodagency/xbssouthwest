@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ReplyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('jwt', ['except' => [ 'login', 'signup']]);
+    }
+
     /**
      * Display a listing of the resource.
      *

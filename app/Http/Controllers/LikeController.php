@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class LikeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('jwt');
+    }
     /**
      * Display a listing of the resource.
      *
