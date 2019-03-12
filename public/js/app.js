@@ -6458,7 +6458,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\np[data-v-0851419a] {\n    padding: 0;\n    margin: 0;\n}\n.display3[data-v-0851419a] {\n    line-height: 50px;\n    font-size: 60px;\n    font-weight: 900;\n}\n.title[data-v-0851419a] {\n    margin-bottom: 10px;\n}\n@media (min-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 40px;\n}\n}\n@media only screen and (max-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 0;\n}\n.mainlogo[data-v-0851419a] {\n        width: 50%;\n}\n.smtext[data-v-0851419a] {\n        margin-left:-20px;\n}\n}\n", ""]);
+exports.push([module.i, "\np[data-v-0851419a] {\n    padding: 0;\n    margin: 0;\n}\n.display3[data-v-0851419a] {\n    line-height: 50px;\n    font-size: 60px;\n    font-weight: 900;\n}\n.title[data-v-0851419a] {\n    margin-bottom: 10px;\n}\n@media (min-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 40px;\n}\n}\n@media only screen and (max-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 0;\n}\n.mainlogo[data-v-0851419a] {\n        width: 50%;\n}\n.smtext[data-v-0851419a] {\n        margin-left:-35px;\n}\n}\n", ""]);
 
 // exports
 
