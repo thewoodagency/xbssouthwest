@@ -6477,7 +6477,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\ndiv[data-v-3c97bf4d] { margin: 0 auto; padding: 10px 0\n}\nimg[data-v-3c97bf4d] {\n    width:100%;\n}\n@media only screen and (max-width: 600px) {\nimg[data-v-3c97bf4d] { width: 90%\n}\ndiv[data-v-3c97bf4d] { text-align: center}\n}\n", ""]);
+exports.push([module.i, "\ndiv[data-v-3c97bf4d] { margin: 0 auto; padding: 10px 0\n}\nimg[data-v-3c97bf4d] {\n    width:100%;\n}\n@media (min-width: 600px) and (max-width: 1024px) {\nimg[data-v-3c97bf4d] { width: 80%;\n}\n}\n@media only screen and (max-width: 600px) {\nimg[data-v-3c97bf4d] { width: 90%;\n}\ndiv[data-v-3c97bf4d] { text-align: center}\n}\n", ""]);
 
 // exports
 

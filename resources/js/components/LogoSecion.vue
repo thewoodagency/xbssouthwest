@@ -20,8 +20,12 @@
         width:100%;
     }
 
+    @media (min-width: 600px) and (max-width: 1024px) {
+        img { width: 80%; }
+    }
+
     @media only screen and (max-width: 600px) {
-        img { width: 90% }
+        img { width: 90%; }
         div { text-align: center}
     }
 </style>
