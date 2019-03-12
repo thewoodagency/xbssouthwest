@@ -1,12 +1,12 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
-// Variables
-@import 'variables';
+@import '~vuetify/dist/vuetify.min.css';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+#app {
+  font-family: 'Raleway', sans-serif;
+}
 
 .navbar-laravel {
   background-color: #fff;

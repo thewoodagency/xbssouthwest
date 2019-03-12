@@ -59,7 +59,7 @@ class Handler extends ExceptionHandler
         {
             return response()->json(['error' => 'Token is invalid - custom error'],
                 Response::HTTP_BAD_REQUEST);
-        } 
+        }
         elseif ($exception instanceof JWTException)
         {
             return response()->json(['error' => 'Token is not provided'],
