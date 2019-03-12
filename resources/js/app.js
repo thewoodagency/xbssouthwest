@@ -5,6 +5,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import 'babel-polyfill';
+import 'whatwg-fetch';
+
 require('./bootstrap');
 
 window.Vue = require('vue');
