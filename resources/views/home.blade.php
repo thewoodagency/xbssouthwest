@@ -13,6 +13,6 @@
         <app-footer></app-footer>
     </v-app>
 </div>
-<script src="{{secure_asset()asset('js/app.js')}}"></script>
+<script src="{{secure_asset('js/app.js')}}"></script>
 </body>
 </html>
