@@ -1933,10 +1933,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "LogoSecion"
 });
@@ -6462,7 +6458,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\np[data-v-0851419a] {\n    padding: 0;\n    margin: 0;\n}\n.display3[data-v-0851419a] {\n    line-height: 50px;\n    font-size: 60px;\n    font-weight: 900;\n}\n.title[data-v-0851419a] {\n    margin-bottom: 10px;\n}\n@media (min-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 40px;\n}\n}\n@media only screen and (max-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 0;\n}\n.mainlogo[data-v-0851419a] {\n        width: 50%;\n}\n}\n", ""]);
+exports.push([module.i, "\np[data-v-0851419a] {\n    padding: 0;\n    margin: 0;\n}\n.display3[data-v-0851419a] {\n    line-height: 50px;\n    font-size: 60px;\n    font-weight: 900;\n}\n.title[data-v-0851419a] {\n    margin-bottom: 10px;\n}\n@media (min-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 40px;\n}\n}\n@media only screen and (max-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 0;\n}\n.mainlogo[data-v-0851419a] {\n        width: 50%;\n}\n.smtext[data-v-0851419a] {\n        margin-left:-20px;\n}\n}\n", ""]);
 
 // exports
 
@@ -6481,7 +6477,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nimg[data-v-3c97bf4d] {\n    width:90%;\n}\n.flex-container[data-v-3c97bf4d] {\n    flex-wrap: wrap;\n}\n", ""]);
+exports.push([module.i, "\ndiv[data-v-3c97bf4d] { margin: 0 auto; padding: 10px 0\n}\nimg[data-v-3c97bf4d] {\n    width:100%;\n}\n@media only screen and (max-width: 600px) {\nimg[data-v-3c97bf4d] { width: 90%\n}\ndiv[data-v-3c97bf4d] { text-align: center}\n}\n", ""]);
 
 // exports
 
@@ -37824,9 +37820,9 @@ var render = function() {
     "v-layout",
     { attrs: { row: "", padding: "10px" } },
     [
-      _c("v-flex", { attrs: { xs2: "" } }),
+      _c("v-flex", { attrs: { xs1: "", md2: "" } }),
       _vm._v(" "),
-      _c("v-flex", { attrs: { xs8: "" } }, [
+      _c("v-flex", { attrs: { xs10: "", md8: "" } }, [
         _c(
           "div",
           { staticClass: "pb-5" },
@@ -37896,7 +37892,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("v-flex", { attrs: { xs2: "" } })
+      _c("v-flex", { attrs: { xs1: "", md2: "" } })
     ],
     1
   )
@@ -38018,7 +38014,7 @@ var render = function() {
               _c("v-flex", { attrs: { xs2: "" } }),
               _vm._v(" "),
               _c("v-flex", { attrs: { xs8: "" } }, [
-                _c("div", { staticClass: "py-5" }, [
+                _c("div", { staticClass: "py-5 pl-sm-0 smtext" }, [
                   _c(
                     "p",
                     {
@@ -38079,41 +38075,26 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "v-container",
-    { attrs: { fluid: "" } },
+    "v-layout",
+    {
+      attrs: {
+        "align-center": "",
+        "justify-space-between": "",
+        row: "",
+        "fill-height": ""
+      }
+    },
     [
-      _c(
-        "v-flex",
-        { attrs: { xs12: "" } },
-        [
-          _c(
-            "v-layout",
-            {
-              attrs: {
-                "align-center": "",
-                "justify-space-between": "",
-                row: "",
-                "fill-height": "",
-                wrap: ""
-              }
-            },
-            [
-              _c("div", [_c("img", { attrs: { src: "/img/asi.png" } })]),
-              _vm._v(" "),
-              _c("div", [_c("img", { attrs: { src: "/img/dahill.png" } })]),
-              _vm._v(" "),
-              _c("div", [_c("img", { attrs: { src: "/img/denitech.png" } })]),
-              _vm._v(" "),
-              _c("div", [_c("img", { attrs: { src: "/img/imagetech.png" } })]),
-              _vm._v(" "),
-              _c("div", [_c("img", { attrs: { src: "/img/onesource.png" } })])
-            ]
-          )
-        ],
-        1
-      )
-    ],
-    1
+      _c("div", [_c("img", { attrs: { src: "/img/asi.png" } })]),
+      _vm._v(" "),
+      _c("div", [_c("img", { attrs: { src: "/img/dahill.png" } })]),
+      _vm._v(" "),
+      _c("div", [_c("img", { attrs: { src: "/img/denitech.png" } })]),
+      _vm._v(" "),
+      _c("div", [_c("img", { attrs: { src: "/img/imagetech.png" } })]),
+      _vm._v(" "),
+      _c("div", [_c("img", { attrs: { src: "/img/onesource.png" } })])
+    ]
   )
 }
 var staticRenderFns = []

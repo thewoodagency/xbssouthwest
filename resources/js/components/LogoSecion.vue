@@ -1,15 +1,11 @@
 <template>
-    <v-container fluid>
-            <v-flex xs12>
-                    <v-layout align-center justify-space-between row fill-height wrap>
+                    <v-layout align-center justify-space-between row fill-height >
                         <div><img src="/img/asi.png"></div>
                         <div><img src="/img/dahill.png"></div>
                         <div><img src="/img/denitech.png"></div>
                         <div><img src="/img/imagetech.png"></div>
                         <div><img src="/img/onesource.png"></div>
                     </v-layout>
-            </v-flex>
-    </v-container>
 </template>
 
 <script>
@@ -19,10 +15,13 @@
 </script>
 
 <style scoped>
+    div { margin: 0 auto; padding: 10px 0 }
     img {
-        width:90%;
+        width:100%;
     }
-    .flex-container {
-        flex-wrap: wrap;
+
+    @media only screen and (max-width: 600px) {
+        img { width: 90% }
+        div { text-align: center}
     }
 </style>

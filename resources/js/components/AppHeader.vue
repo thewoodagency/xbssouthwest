@@ -24,7 +24,7 @@
                 <v-flex xs2>
                 </v-flex>
                 <v-flex xs8>
-                    <div class="py-5">
+                    <div class="py-5 pl-sm-0 smtext">
                         <p class="display-2 font-weight-thin text-uppercase">not just a name change.</p>
                         <p class="display3 text-uppercase mb-3">a game changer.</p>
                         <p class="title">Same great people.</p>
@@ -72,6 +72,9 @@
         }
         .mainlogo {
             width: 50%;
+        }
+        .smtext {
+            margin-left:-20px;
         }
     }
 </style>

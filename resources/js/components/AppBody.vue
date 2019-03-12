@@ -4,9 +4,9 @@
             padding="10px"
 
     >
-        <v-flex xs2>
+        <v-flex xs1 md2>
         </v-flex>
-        <v-flex xs8>
+        <v-flex xs10 md8>
             <div class="pb-5">
                 <logo-section></logo-section>
                 <p>We're excited to announce that in furtherance of our mission to provide the best possible customer
@@ -45,7 +45,7 @@
                     Email us at <a href="mailto:XBSsupport@xerox.com">XBSsupport@xerox.com</a>, call us at 210-805-9750, or consult with your local account executive.</p>
             </div>
         </v-flex>
-        <v-flex xs2>
+        <v-flex xs1 md2>
         </v-flex>
 
     </v-layout>
