@@ -30,6 +30,7 @@ Vue.use(Vuetify)
 Vue.component('AppHeader', require('./components/AppHeader.vue').default);
 Vue.component('AppFooter', require('./components/AppFooter.vue').default);
 Vue.component('AppBody', require('./components/AppBody.vue').default);
+Vue.component('Login', require('./components/Login.vue').default);
 
 
 /**

@@ -17,7 +17,7 @@
 <style scoped>
     div { margin: 0 auto; padding: 10px 0 }
     img {
-        width:100%;
+        width:90%;
     }
 
     @media (min-width: 600px) and (max-width: 1024px) {
