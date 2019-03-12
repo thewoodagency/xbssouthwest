@@ -39,10 +39,10 @@
                 <p>We appreciate our partnership, please reach out to us with any questions or to schedule an account
                     review, call or meeting at XBSsupport@xerox.com or 210-805-9750.
                 </p>
-                <hr>
+                <hr class="my-5" style="height:3px;border:none;color:#333;background-color:#333;" />
                 <question-list></question-list>
                 <p class="font-weight-bold p-4">If you have any additional questions:<br>
-                    Email us at XBSsupport@xerox.com, call us at 210-805-9750, or consult with your local account executive.</p>
+                    Email us at <a href="mailto:XBSsupport@xerox.com">XBSsupport@xerox.com</a>, call us at 210-805-9750, or consult with your local account executive.</p>
             </div>
         </v-flex>
         <v-flex xs2>

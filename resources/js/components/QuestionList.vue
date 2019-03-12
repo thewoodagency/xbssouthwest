@@ -9,7 +9,7 @@
             height="auto"
     >
         <div class="font-weight-bold">Q: {{question.title}}</div>
-        <div>A: {{question.body}}</div>
+        <div v-html="question.body"></div>
     </v-list>
     </div>
 </template>

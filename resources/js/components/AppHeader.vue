@@ -1,12 +1,12 @@
 <template>
     <nav>
-        <v-layout class="pa-3 p-3" height="auto" wrap>
+        <v-layout class="pt-3" height="auto" wrap>
             <v-flex xs0 md2></v-flex>
             <v-flex xs12 md4>
                 <img class="mainlogo" src="/img/logo.png">
             </v-flex>
             <v-flex xs12 md4>
-                <div class="xsphone" align="right">XBSsupport@xerox.com | 210-805-9750</div>
+                <div class="xsphone" align="right"><a href="mailto:XBSsupport@xerox.com">XBSsupport@xerox.com</a> | 210-805-9750</div>
             </v-flex>
             <v-flex xs0 md2></v-flex>
         </v-layout>
@@ -26,7 +26,7 @@
                 <v-flex xs8>
                     <div class="py-5">
                         <p class="display-2 font-weight-thin text-uppercase">not just a name change.</p>
-                        <p class="display-3 font-weight-black text-uppercase mb-3">a game changer.</p>
+                        <p class="display3 text-uppercase mb-3">a game changer.</p>
                         <p class="title">Same great people.</p>
                         <p class="title">Same great products.</p>
                         <p class="title">New business-changing solutions.</p>
@@ -50,9 +50,10 @@
         padding: 0;
         margin: 0;
     }
-    .display-3 {
-        margin-top: -15px;
-        line-height: 0;
+    .display3 {
+        line-height: 50px;
+        font-size: 60px;
+        font-weight: 900;
     }
 
     .title {
@@ -61,7 +62,7 @@
 
     @media (min-width: 960px) {
         .xsphone {
-            margin-top: 50px;
+            margin-top: 40px;
         }
     }
 

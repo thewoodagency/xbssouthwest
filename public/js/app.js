@@ -6462,7 +6462,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\np[data-v-0851419a] {\n    padding: 0;\n    margin: 0;\n}\n.display-3[data-v-0851419a] {\n    margin-top: -15px;\n    line-height: 0;\n}\n.title[data-v-0851419a] {\n    margin-bottom: 10px;\n}\n@media (min-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 50px;\n}\n}\n@media only screen and (max-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 0;\n}\n.mainlogo[data-v-0851419a] {\n        width: 50%;\n}\n}\n", ""]);
+exports.push([module.i, "\np[data-v-0851419a] {\n    padding: 0;\n    margin: 0;\n}\n.display3[data-v-0851419a] {\n    line-height: 50px;\n    font-size: 60px;\n    font-weight: 900;\n}\n.title[data-v-0851419a] {\n    margin-bottom: 10px;\n}\n@media (min-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 40px;\n}\n}\n@media only screen and (max-width: 960px) {\n.xsphone[data-v-0851419a] {\n        margin-top: 0;\n}\n.mainlogo[data-v-0851419a] {\n        width: 50%;\n}\n}\n", ""]);
 
 // exports
 
@@ -37868,15 +37868,27 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("hr"),
+            _c("hr", {
+              staticClass: "my-5",
+              staticStyle: {
+                height: "3px",
+                border: "none",
+                color: "#333",
+                "background-color": "#333"
+              }
+            }),
             _vm._v(" "),
             _c("question-list"),
             _vm._v(" "),
             _c("p", { staticClass: "font-weight-bold p-4" }, [
               _vm._v("If you have any additional questions:"),
               _c("br"),
+              _vm._v("\n                Email us at "),
+              _c("a", { attrs: { href: "mailto:XBSsupport@xerox.com" } }, [
+                _vm._v("XBSsupport@xerox.com")
+              ]),
               _vm._v(
-                "\n                Email us at XBSsupport@xerox.com, call us at 210-805-9750, or consult with your local account executive."
+                ", call us at 210-805-9750, or consult with your local account executive."
               )
             ])
           ],
@@ -37970,7 +37982,7 @@ var render = function() {
     [
       _c(
         "v-layout",
-        { staticClass: "pa-3 p-3", attrs: { height: "auto", wrap: "" } },
+        { staticClass: "pt-3", attrs: { height: "auto", wrap: "" } },
         [
           _c("v-flex", { attrs: { xs0: "", md2: "" } }),
           _vm._v(" "),
@@ -37983,7 +37995,10 @@ var render = function() {
           _vm._v(" "),
           _c("v-flex", { attrs: { xs12: "", md4: "" } }, [
             _c("div", { staticClass: "xsphone", attrs: { align: "right" } }, [
-              _vm._v("XBSsupport@xerox.com | 210-805-9750")
+              _c("a", { attrs: { href: "mailto:XBSsupport@xerox.com" } }, [
+                _vm._v("XBSsupport@xerox.com")
+              ]),
+              _vm._v(" | 210-805-9750")
             ])
           ]),
           _vm._v(" "),
@@ -38012,14 +38027,9 @@ var render = function() {
                     [_vm._v("not just a name change.")]
                   ),
                   _vm._v(" "),
-                  _c(
-                    "p",
-                    {
-                      staticClass:
-                        "display-3 font-weight-black text-uppercase mb-3"
-                    },
-                    [_vm._v("a game changer.")]
-                  ),
+                  _c("p", { staticClass: "display3 text-uppercase mb-3" }, [
+                    _vm._v("a game changer.")
+                  ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "title" }, [
                     _vm._v("Same great people.")
@@ -38149,7 +38159,7 @@ var render = function() {
               _vm._v("Q: " + _vm._s(question.title))
             ]),
             _vm._v(" "),
-            _c("div", [_vm._v("A: " + _vm._s(question.body))])
+            _c("div", { domProps: { innerHTML: _vm._s(question.body) } })
           ]
         )
       })
