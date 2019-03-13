@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('/login', function () {
-    return view('admin');
-});
+Route::view('/', 'home');
+Route::view('/dashboard', 'admin');
+Route::view('/dashboard/{any1}', 'admin');
+
+Route::view('/{any}', 'home');

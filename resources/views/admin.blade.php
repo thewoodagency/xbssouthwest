@@ -9,8 +9,7 @@
 <body>
 <div id="app">
     <v-app>
-        <app-header></app-header>
-        <login></login>
+        <dashboard-home></dashboard-home>
     </v-app>
 </div>
 <script src="{{secure_asset('js/app.js')}}"></script>

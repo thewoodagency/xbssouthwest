@@ -4,29 +4,25 @@
             <v-flex xs2></v-flex>
             <v-flex xs8>
                 <h1>Admin Login</h1>
-                <form @submit.prevent="submit">
+                <v-form @submit.prevent="login" v-model="valid" ref="form">
                     <v-text-field
                             v-model="form.email"
-                            :error-messages="emailErrors"
                             label="Admin E-mail"
                             required
-                            @input="$v.email.$touch()"
-                            @blur="$v.email.$touch()"
                             type="email"
                     ></v-text-field>
 
                     <v-text-field
                             v-model="form.password"
-                            :rules="nameRules"
                             label="Password"
                             type="password"
                             required
                     ></v-text-field>
 
 
-                    <v-btn @click="submit" color="green">Login</v-btn>
+                    <v-btn type="submit" color="green">Login</v-btn>
                     <v-btn @click="clear">clear</v-btn>
-                </form>
+                </v-form>
             </v-flex>
             <v-flex xs2></v-flex>
         </v-layout>
@@ -41,15 +37,23 @@
                 form: {
                     email: '',
                     password: ''
-                }
+                },
+                message: '',
+                valid: true
+            }
+        },
+        created() {
+            if(User.loggedIn()) {
+                this.$router.push({name:'editquestion'});
             }
         },
         methods: {
-            submit() {
-                axios.post('/api/auth/login', this.form)
-                    .then(res => console.log(res.data))
-                    .error(error => console.log(error.response.data))
-            }
+            login() {
+                User.login(this.form);
+                this.$router.push({name:'questions'});
+            },
+            clear() {}
+
         }
     }
 </script>

@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "babel-polyfill": "^6.26.0",
+        "vue-router": "^3.0.2",
         "vuetify": "^1.5.5",
         "whatwg-fetch": "^3.0.0"
     }

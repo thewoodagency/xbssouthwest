@@ -13,8 +13,11 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import router from './Helpers/router.js';
+import User from './Helpers/User';
+window.User = User;
 
-Vue.use(Vuetify)
+Vue.use(Vuetify);
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,10 +30,9 @@ Vue.use(Vuetify)
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('AppHeader', require('./components/AppHeader.vue').default);
-Vue.component('AppFooter', require('./components/AppFooter.vue').default);
-Vue.component('AppBody', require('./components/AppBody.vue').default);
-Vue.component('Login', require('./components/Login.vue').default);
+Vue.component('AppHome', require('./components/AppHome.vue').default);
+Vue.component('DashboardHome', require('./components/Dashboard/DashboardHome.vue').default);
+//Vue.component('AppBody', require('./components/AppBody.vue').default);
 
 
 /**
@@ -40,5 +42,6 @@ Vue.component('Login', require('./components/Login.vue').default);
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });
