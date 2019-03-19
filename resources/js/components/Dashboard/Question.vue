@@ -29,9 +29,12 @@
         },
         methods: {
             destroy() {
-                axios.delete(`/api/questions/${this.question.slug}`)
-                    .then(res => this.$router.push('/dashboard/login'))
-                    .catch(error => console.log(error.response.data));
+                let result = confirm("Want to delete?");
+                if (result) {
+                    axios.delete(`/api/questions/${this.question.slug}`)
+                        .then(res => this.$router.push('/dashboard/login'))
+                        .catch(error => console.log(error.response.data));
+                }
             },
             edit() {
                 this.$router.push(`/dashboard/questions/${this.question.slug}`)
