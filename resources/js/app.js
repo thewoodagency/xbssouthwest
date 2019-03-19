@@ -15,9 +15,16 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import router from './Helpers/router.js';
 import User from './Helpers/User';
+
 window.User = User;
+window.EventBus = new Vue();
 
 Vue.use(Vuetify);
+
+import VueSimplemde from 'vue-simplemde'
+Vue.use(VueSimplemde)
+import md from 'marked';
+window.md = md;
 
 /**
  * The following block of code may be used to automatically register your
@@ -33,7 +40,6 @@ Vue.use(Vuetify);
 Vue.component('AppHome', require('./components/AppHome.vue').default);
 Vue.component('DashboardHome', require('./components/Dashboard/DashboardHome.vue').default);
 //Vue.component('AppBody', require('./components/AppBody.vue').default);
-
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

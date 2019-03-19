@@ -14,7 +14,8 @@ class User {
         axios.post('/api/auth/login', data)
             .then(res => this.responseAfterLogin(res))
             .catch(error => {
-                console.log(error);
+                console.log(error.response.data.error);
+                //this.message = 'Error: please check your login information and try again...';
             });
     }
 
@@ -23,11 +24,13 @@ class User {
         const username = res.data.user;
         if (Token.isValid(token)) {
             AppStorage.store(username, token);
+            window.location = '/dashboard/questions';
         }
     }
 
     hasToken() {
         const storedToken = AppStorage.getToken();
+        console.log('token', storedToken);
         if (storedToken) {
             return Token.isValid(storedToken) ?
                 true : false;
@@ -41,7 +44,7 @@ class User {
 
     logout() {
         AppStorage.clear();
-        window.location = '/login';
+        window.location = '/dashboard/login';
     }
 
     name() {

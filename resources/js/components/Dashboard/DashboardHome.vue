@@ -2,19 +2,22 @@
     <div>
         <app-header></app-header>
         <router-view></router-view>
-        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
     import AppHeader from '../AppHeader';
-    import AppFooter from '../AppFooter';
 
     export default {
         name: "DashboardHome",
         components: {
-            AppHeader,
-            AppFooter
+            AppHeader
+        },
+        created() {
+            console.log(User.loggedIn());
+            if (!User.loggedIn()) {
+                this.$router.push({name: 'login'});
+            }
         }
     }
 </script>

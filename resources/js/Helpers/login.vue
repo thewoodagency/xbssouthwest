@@ -1,8 +1,8 @@
 <template>
     <v-container>
-        <v-layout row>
+        <v-layout row fill-height>
             <v-flex xs2></v-flex>
-            <v-flex xs8>
+            <v-flex xs8 style="padding: 100px 0">
                 <h1>Admin Login</h1>
                 <v-form @submit.prevent="login" v-model="valid" ref="form">
                     <v-text-field
@@ -19,7 +19,6 @@
                             required
                     ></v-text-field>
 
-
                     <v-btn type="submit" color="green">Login</v-btn>
                     <v-btn @click="clear">clear</v-btn>
                 </v-form>
@@ -35,7 +34,7 @@
         data() {
             return {
                 form: {
-                    email: '',
+                    email: 'admin@xbssouthwest.com',
                     password: ''
                 },
                 message: '',
@@ -44,13 +43,13 @@
         },
         created() {
             if(User.loggedIn()) {
-                this.$router.push({name:'editquestion'});
+                this.$router.push({name:'questions'});
             }
         },
         methods: {
             login() {
                 User.login(this.form);
-                this.$router.push({name:'questions'});
+                //this.$router.push({name:'questions'});
             },
             clear() {}
 

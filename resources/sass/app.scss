@@ -1,8 +1,10 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,900|Material+Icons');
 
 @import '~vuetify/dist/vuetify.min.css';
+
+@import '~simplemde/dist/simplemde.min.css';
 
 #app {
   font-family: 'Raleway', sans-serif;

@@ -7,8 +7,17 @@ use App\User;
 
 class Question extends Model
 {
-    //protected $fillable = ['title', 'slug']; //list all fields
-    protected $guarded = [];
+    protected $fillable = ['title', 'slug', 'body', 'user_id', 'category_id']; //list all fields
+    //protected $guarded = [];
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function($question) {
+           $question->slug = str_slug($question->title);
+        });
+    }
+
     public function getRouteKeyName() {
         return 'slug';
     }

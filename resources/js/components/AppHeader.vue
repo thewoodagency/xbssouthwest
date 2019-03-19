@@ -1,12 +1,15 @@
 <template>
-    <nav>
+    <div>
         <v-layout class="pt-3" height="auto" wrap>
             <v-flex xs0 md2></v-flex>
             <v-flex xs12 md4>
                 <router-link to="/"><img class="mainlogo" src="/img/logo.png"></router-link>
             </v-flex>
             <v-flex xs12 md4>
-                <div class="xsphone" align="right"><a href="mailto:XBSsupport@xerox.com">XBSsupport@xerox.com</a> | 210-805-9750</div>
+                <div class="xsphone" align="right">
+                    <a href="mailto:XBSsupport@xerox.com">XBSsupport@xerox.com</a> | 210-805-9750
+                    <router-link to="/logout"><v-btn v-if="login" color="red">Logout</v-btn></router-link>
+                </div>
             </v-flex>
             <v-flex xs0 md2></v-flex>
         </v-layout>
@@ -37,11 +40,24 @@
 
             </v-layout>
         </v-parallax>
-    </nav>
+    </div>
 </template>
 <script>
     export default {
-        name: "header"
+        name: "AppHeader",
+        data() {
+            return {
+                login: false
+            }
+        },
+        created() {
+            EventBus.$on('logout', () => {
+                User.logout();
+            })
+            if (User.loggedIn()) {
+                this.login = true;
+            }
+        }
     }
 </script>
 

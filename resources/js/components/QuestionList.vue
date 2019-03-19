@@ -9,7 +9,7 @@
             height="auto"
     >
         <div class="font-weight-bold">Q: {{question.title}}</div>
-        <div v-html="question.body"></div>
+        <div v-html="body(question.body)"></div>
     </v-list>
     </div>
 </template>
@@ -25,6 +25,11 @@
         created() {
             axios.get('/api/questions')
                 .then(res => this.questions = res.data.data);
+        },
+        methods: {
+            body(answer) {
+                return md.parse(answer);
+            }
         }
     }
 </script>

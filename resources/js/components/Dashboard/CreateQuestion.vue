@@ -3,17 +3,18 @@
         <v-layout row>
             <v-flex xs2></v-flex>
             <v-flex xs8>
-                <h1>Edit Question</h1>
-                <v-form @submit.prevent="edit" v-model="valid" ref="form">
+                <h1>Add Question</h1>
+                <v-form @submit.prevent="add" v-model="valid" ref="form">
                     <v-text-field
                             v-model="form.title"
                             label="Question"
                             required
                             type="text"
+                            :rules="nameRules"
                     ></v-text-field>
 
                     <markdown-editor v-model="form.body">Answer Here</markdown-editor>
-                    <v-btn type="submit" color="green">Edit</v-btn>
+                    <v-btn type="submit" color="green">Add</v-btn>
                     <v-btn @click="cancel">Cancel</v-btn>
                     <v-alert
                             :value="errors"
@@ -42,30 +43,29 @@
             return {
                 form: {
                     title: '',
-                    body: '',
+                    body: 'Answer here...',
                     user_id: 14,
                     category_id: 1
                 },
                 valid: true,
-                errors: ''
+                errors: '',
+                nameRules: [
+                    v => !!v || 'This field is required'
+                ],
             }
         },
         methods: {
-            edit() {
-                axios.patch(`/api/questions/${this.form.slug}`, this.form)
-                    .then(res=> this.cancel())
-                    .catch(error => this.errors = error.response.data.error);
-
+            add() {
+                if (this.valid) {
+                    axios.post('/api/questions', this.form)
+                        .then(res => this.$router.push({name: 'questions'}))
+                        .catch(error => this.errors = error.response.data.error);
+                }
             },
             cancel() {
                 this.$router.push({name: 'questions'});
             }
-        },
-        created() {
-            axios.get(`/api/questions/${this.$route.params.edit}`)
-                .then(res => this.form = res.data.data)
-                .catch(error => console.log(error.response.data));
-        },
+        }
     }
 </script>
 
