@@ -3,7 +3,7 @@
         <v-layout class="pt-3" height="auto" wrap>
             <v-flex xs0 md2></v-flex>
             <v-flex xs12 md4>
-                <router-link to="/"><img class="mainlogo" src="/img/logo.png"></router-link>
+                <a href="https://www.xbssouthwest.com/"><img class="mainlogo" src="/img/logo.png"></a>
             </v-flex>
             <v-flex xs12 md4>
                 <div class="xsphone" align="right">
